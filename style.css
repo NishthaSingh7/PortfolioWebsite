@@ -1,0 +1,217 @@
+/* 1. Body */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: #f4f1c1; */
+}
+
+/* 2. Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #8accd5;
+  color: white;
+}
+.logo {
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+
+/* 3. Hero Section */
+#hero {
+  position: relative;
+  padding: 3rem;
+  text-align: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    #ff90bb33 0px,
+    #ff90bb33 40px,
+    #ffc1da33 40px,
+    #ffc1da33 80px
+  );
+  animation: diagonalWave 2s linear infinite;
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@keyframes diagonalWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+#hero:hover h1,
+#hero:hover h2,
+#hero:hover .down_btn {
+  position: relative;
+  z-index: 1;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #3a0519;
+  text-shadow: 2px 2px #ffffff70;
+  margin-bottom: 0.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+#hero h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+.down_btn {
+  background-color: #a53860;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 2px 2px 8px #8883;
+  transition: all 0.3s ease;
+}
+
+.down_btn:hover {
+  background-color: #670d2f;
+  transform: scale(1.05);
+}
+
+/* 4. Major Part Section */
+
+#MajorPart {
+  padding: 1rem;
+  background-color: #ffc1da;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+#MajorPart h2 {
+  color: #a53860;
+
+  /* font-family: "Cascadia Code", sans-serif; */
+  font-weight: 800;
+  font-style: normal;
+  font-size: 32px;
+}
+p {
+  color: #3a0519;
+  font-size: 20px;
+  /* font-family: "Bebas Neue", sans-serif; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+
+  font-style: normal;
+}
+/* 8. Projects Links */
+#projects a {
+  display: inline-block;
+  color: #a53860;
+  /* font-family: "Cascadia Code", sans-serif; */
+  font-weight: 800;
+  font-style: normal;
+  font-size: 14px;
+
+  background-color: whitesmoke; /* Candy rose color */
+  padding: 0.2rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+#projects h2 {
+  font-size: 24px;
+}
+
+#projects a:hover {
+  background-color: #e491b1;
+  color: whitesmoke;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. Contact Section */
+#contact {
+  background-color: #f8f8e1;
+  padding: 10px;
+}
+
+/* 6. Nav */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+nav a:hover {
+
+  font-size: 22px;
+  /* color:#a53860; */
+  border-bottom: 2px solid #a53860 ;
+}
+
+/* 7. Global Links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 11. Footer */
+footer {
+  background-color: #8accd5;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Responsive Website Layout CSS */
+@media (max-width: 640px) {
+  header {
+    padding: 5px;
+  }
+  nav {
+    background-color: #f8f8e1;
+    margin: 0;
+  }
+  nav ul {
+    /* visibility: hidden; */
+    display: block;
+    padding: 10px;
+  }
+}
